@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+header, main, footer {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: linear-gradient( 90deg, #ffffff 0%, #000 25%, #000 75%, #ffffff 100% );
+}
