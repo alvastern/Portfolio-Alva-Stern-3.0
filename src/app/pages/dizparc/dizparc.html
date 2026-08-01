@@ -96,7 +96,7 @@
                     identify areas for improvement. We based our work on a general procurement model 
                     from the , supported by insights from a workshop conducted during the project.</p>
 
-                <img src="../../../../images/Dizparc/procurement-process.png">
+                <img src="../../../../images/Dizparc/procurement-process.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/procurement-process.png')" alt="Visualization of the procurement process">
             </article>
 
             <article>
@@ -161,7 +161,7 @@
                         differences between the roles. But also to develop a clearer picture of potential users 
                         and their needs.</p>
 
-                    <img src="../../../../images/Dizparc/persona.png">
+                    <img src="../../../../images/Dizparc/persona.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/persona.png')" alt="Persona of a potential user of the procurement tool">
                 </article>
             </article>
         </div>
@@ -189,8 +189,8 @@
                     ensure that no design requirements were excluded.</p>
 
                 <div>
-                    <img src="../../../../images/Dizparc/sketch-my-page.png">
-                    <img src="../../../../images/Dizparc/sketch-meetings.png">
+                    <img src="../../../../images/Dizparc/sketch-my-page.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/sketch-my-page.png')" alt="Sketch of the procurement tool">
+                    <img src="../../../../images/Dizparc/sketch-meetings.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/sketch-meetings.png')" alt="Sketch of the procurement tool">
                 </div>
             </article>
         </div>
@@ -212,7 +212,7 @@
                         the process, key pain points and specific areas for improvement were identified. 
                         This provided valuable insights that helped guide design decisions.</p>
 
-                    <img src="../../../../images/Dizparc/customer-journey.png">
+                    <img src="../../../../images/Dizparc/customer-journey.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/customer-journey.png')" alt="The users customer journey">
                 </article>
 
                 <article>
@@ -222,7 +222,7 @@
                         different parts of the service were connected and provided insights that 
                         informed design decisions.</p>
 
-                    <img src="../../../../images/Dizparc/blueprint.png">
+                    <img src="../../../../images/Dizparc/blueprint.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/blueprint.png')" alt="Service blueprint">
                 </article>
             </article>
         </div>
@@ -243,8 +243,8 @@
                         ensuring that the tool would be easy to navigate and intuitive for users.</p>
 
                     <div>
-                        <img src="../../../../images/Dizparc/wireframe-my-page.png">
-                        <img src="../../../../images/Dizparc/wireframe-staff.png">
+                        <img src="../../../../images/Dizparc/wireframe-my-page.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/wireframe-my-page.png')" alt="Wireframe of the procurement tool">
+                        <img src="../../../../images/Dizparc/wireframe-staff.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/wireframe-staff.png')" alt="Wireframe of the procurement tool">
                     </div>
                 </article>
 
@@ -255,8 +255,8 @@
                         calm impression through colors, while maintaining a professional appearance.</p>
 
                     <div>
-                        <img src="../../../../images/Dizparc/prototype-my-page.png">
-                        <img src="../../../../images/Dizparc/prototype-staff.png">
+                        <img src="../../../../images/Dizparc/prototype-my-page.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/prototype-my-page.png')" alt="High-fidelity prototype of the procurement tool">
+                        <img src="../../../../images/Dizparc/prototype-staff.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/prototype-staff.png')" alt="High-fidelity prototype of the procurement tool">
                     </div>
                 </article>
             </article>
@@ -288,7 +288,7 @@
                 </article>
             </div>
 
-            <img src="../../../../images/Dizparc/result-project-overview.png">
+            <img src="../../../../images/Dizparc/result-project-overview.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/result-project-overview.png')" alt="Result of the project overview">
         </article>
 
         <article>
@@ -313,7 +313,7 @@
                 </article>
             </div>
 
-            <img src="../../../../images/Dizparc/result-documents.png">
+            <img src="../../../../images/Dizparc/result-documents.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/result-documents.png')" alt="Result of the document part">
         </article>
 
         <article>
@@ -339,7 +339,7 @@
                 </article>
             </div>
 
-            <img src="../../../../images/Dizparc/result-meetings.png">
+            <img src="../../../../images/Dizparc/result-meetings.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/result-meetings.png')" alt="Result of the meetings part">
         </article>
 
         <article>
@@ -364,7 +364,7 @@
                 </article>
             </div>
 
-            <img src="../../../../images/Dizparc/result-staff.png">
+            <img src="../../../../images/Dizparc/result-staff.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/result-staff.png')" alt="Result of the staff part">
         </article>
 
         <article>
@@ -388,7 +388,7 @@
                 </article>
             </div>
 
-            <img src="../../../../images/Dizparc/result-archive.png">
+            <img src="../../../../images/Dizparc/result-archive.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/result-archive.png')" alt="Result of the archive part">
         </article>
 
         <article>
@@ -413,7 +413,7 @@
                 </article>
             </div>
 
-            <img src="../../../../images/Dizparc/result-my-page.png">
+            <img src="../../../../images/Dizparc/result-my-page.png" class="clickable-image" (click)="openImage('../../../../images/Dizparc/result-my-page.png')" alt="Result of the personalized page">
         </article>
     </section>
 
@@ -456,3 +456,8 @@
 </main>
 
 <app-footer></app-footer>
+
+<div class="image-modal" *ngIf="selectedImage" (click)="closeImage()">
+    <button class="close-button" type="button" (click)="closeImage()">&times;</button>
+    <img [src]="selectedImage" alt="Förstorad bild" (click)="$event.stopPropagation()">
+</div>

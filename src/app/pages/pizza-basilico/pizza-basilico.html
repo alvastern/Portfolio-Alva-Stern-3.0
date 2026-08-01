@@ -94,8 +94,8 @@
 
             <article>
                 <h4>My Contribution</h4>
-                <p>I was responsible for the entire project, including UX design, frontend development, 
-                    backend development, database design, authentication, API development, and 
+                <p>I was responsible for the entire project, including UX design, frontend, 
+                    backend, database design, authentication, API development, and 
                     deployment.</p>
             </article>
 
@@ -107,7 +107,7 @@
         <aside>
             <h3>Solution Overview</h3>
             <p>The solution consists of a customer-facing website and an administrative dashboard 
-                connected through a custom REST API and MySQL database.</p>
+                connected through a REST API and MySQL database.</p>
         </aside>
 
         <article>
@@ -116,8 +116,8 @@
                 <p><strong>Link to website:</strong> <a href="https://pizza-basilico.netlify.app/" target="_blank">https://pizza-basilico.netlify.app/</a></p>
 
                 <p>The customer website was designed to provide a seamless experience for visitors. Throught 
-                    the website, customers can explore the restaurant, see the menu, make table reservations 
-                    and place takeaway orders through a responsive and user-friendly interface.</p>
+                    the website, customers can explore the restaurant, see the menu, make reservations 
+                    and place takeaway orders through a user-friendly interface.</p>
 
                 <img src="../../../../images/Pizza Basilico/homepage.png">
             </article>
@@ -127,13 +127,13 @@
 
                 <p><strong>Link to admin dashboard:</strong> <a href="https://pizza-basilico.netlify.app/admin/login" target="_blank">https://pizza-basilico.netlify.app/admin/login</a></p>
 
-                <p><strong>Email:</strong> test@gmail.com</p>
-                <p><strong>Password:</strong> Test123</p>
-
                 <p>The administrative dashboard gives staff access to the tools needed to manage 
-                    daily operations in the company. Through a centralized interface, employees 
+                    daily operations in the company. Through this interface, employees 
                     can manage menu items, reservations, takeaway orders, opening hours, and 
                     restaurant information efficiently.</p>
+
+                <p><strong>Email:</strong> test@gmail.com</p>
+                <p><strong>Password:</strong> Test123</p>
             </article>
 
             <article>
@@ -158,8 +158,8 @@
                 <h3>Planning & UX/UI</h3>
 
                 <p>Initial concepts were developed through different methodes such as sitemaps, 
-                    wireframes, and prototypes. The purpose of this was to define the structure 
-                    and user experience of the application.</p>
+                    wireframes, and prototypes. The purpose was to define the structure 
+                    and user experience.</p>
             </aside>
 
             <article>
@@ -221,10 +221,8 @@
                     overview of how information would be stored and connected, serving as a 
                     blueprint for the MySQL database implementation.</p>
 
-                <img src="../../../../images/Pizza Basilico/ER-diagram.png">
-            </article>
+                <img src="../../../../images/Pizza Basilico/ER-diagram.png" class="er-diagram">
 
-            <article>
                 <h4>API Design</h4>
                 <p>The API structure was planned before implementation to establish clear 
                     communication between the frontend and backend. RESTful endpoints were 
@@ -251,7 +249,7 @@
                         responsive user experience. A component-based architecture was used 
                         to structure the application, while Angular features such as data 
                         binding, routing, and HttpClient enabled communication with the 
-                        backend and the presentation of dynamic content from the database.</p>
+                        backend and the presentation of content from the database.</p>
                 </article>
 
                 <article>
@@ -270,8 +268,8 @@
                         When an administrator logs in, the backend validates the credentials against 
                         stored user data in the database. If the credentials are correct, a JWT token 
                         is generated and returned to frontend. This token is then included in future 
-                        requests, allowing the backend to verify the user's identity and ensure that 
-                        only authorized users can access protected routes and functions.</p>
+                        requests, allowing the backend to verify the user's identity and ensure  
+                        only authorized users can access protected functions.</p>
 
                     <img src="../../../../images/Pizza Basilico/authorization-process.png">
                 </article>
@@ -292,7 +290,7 @@
             <aside>
                 <h3>Deployment</h3>
 
-                <p>The application was deployed to make it accessible for users online. The frontend, 
+                <p>The application was deployed to make it accessible for users. The frontend, 
                     backend, and database were hosted on separate platforms to create a complete 
                     production-ready solution.</p>
             </aside>
@@ -321,16 +319,6 @@
                         persist information such as reservations, orders, and user accounts while 
                         remaining accessible to the backend.</p>
                 </article>
-
-                <article>
-                    <h3>Result</h3>
-                    <p><strong>Link to website:</strong> <a href="https://pizza-basilico.netlify.app/" target="_blank">https://pizza-basilico.netlify.app/</a></p>
-                    <p><a href="https://pizza-basilico.netlify.app/admin/login" target="_blank">https://pizza-basilico.netlify.app/admin/login</a></p>
-
-                    <h4>Log in</h4>
-                    <p><strong>Email:</strong> test@gmail.com</p>
-                    <p><strong>Password:</strong> Test123</p>
-                </article>
             </article>
         </div>
     </section>
@@ -348,29 +336,28 @@
     </section>
 
     <section>
+    <img src="../../../../images/lessons-learned.png">
+
+    <div>
       <h2>Lessons learned</h2>
-      
       <article>
-        <p><strong>This project provided valuable experience in full-stack web development and 
-            offered insights into both the technical and organizational aspects of building a 
-            complete web application.</strong><br>
-            <br>
-            I gained valuable experience in planning and structuring a full-stack application 
-            from concept to deployment. I strengthened my skills in Angular by building dynamic 
-            and responsive user interfaces, while also developing a deeper understanding of how 
-            frontend and backend systems interact.<br>
-            <br>
-            Additionally, I learned how to design and implement a REST API that enables secure 
-            communication between the frontend and a MySQL database, providing hands-on experience 
-            with full-stack architecture and data management.</p>
-      </article>
+            <p>This project provided experience in full-stack web development and 
+                offered insights into both the technical and organizational aspects of building a 
+                complete web application. I strengthened my skills in Angular by building dynamic 
+                and responsive user interfaces, while also developing a deeper understanding of how 
+                frontend and backend systems interact.
+                Additionally, I learned how to design and implement a REST API that enables secure 
+                communication between the frontend and a MySQL database, providing hands-on experience 
+                with full-stack architecture and data management.</p>
+        </article>
+      </div>
     </section>
 
     <section>
         <div>
             <h2>Thank You!</h2>
             <p>Thank you for reading about this work, I hope you found it interesting! If you have 
-                any questions, you are more than welcome to <a href="mailto:alva.stern02@gmail.com">contact me</a>.</p>
+                any questions or other thoughts, you are more than welcome to <a href="mailto:alva.stern02@gmail.com">contact me</a>.</p>
         </div>
 
         <img src="../../../../images/project-finish.png">
@@ -378,3 +365,8 @@
 </main>
 
 <app-footer></app-footer>
+
+<div class="image-modal" *ngIf="selectedImage" (click)="closeImage()">
+    <button class="close-button" type="button" (click)="closeImage()">&times;</button>
+    <img [src]="selectedImage" alt="Förstorad bild" (click)="$event.stopPropagation()">
+</div>
