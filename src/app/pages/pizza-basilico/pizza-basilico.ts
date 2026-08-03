@@ -4,13 +4,14 @@ import { RouterLink } from '@angular/router';
 import { Footer } from '../../components/footer/footer';
 
 @Component({
-  selector: 'app-dizparc',
+  selector: 'app-pizza-basilico',
   imports: [CommonModule, RouterLink, Footer],
   standalone: true,
   templateUrl: './pizza-basilico.html',
   styleUrl: './pizza-basilico.scss',
 })
-export class Dizparc {
+
+export class PizzaBasilico {
   selectedImage: string | null = null;
 
   openImage(imageSrc: string): void {

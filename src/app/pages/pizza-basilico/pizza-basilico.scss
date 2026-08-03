@@ -424,7 +424,7 @@ main > section:nth-of-type(4) {
     }
 
     .er-diagram {
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
     }
 
     div {
@@ -455,11 +455,6 @@ main > section:nth-of-type(4) {
       margin: 2.5rem 0 1rem;
       font-size: 2rem;
       font-weight: 900;
-    }
-
-    h4 {
-      margin-top: 1.5rem;
-      font-size: 1.05rem;
     }
 
     p {
@@ -690,4 +685,46 @@ main > section:nth-of-type(7) {
   main > section:nth-of-type(7) {
     gap: 2.5rem;
   }
+}
+
+// Förstoringsbar bild
+.clickable-image {
+  cursor: pointer;
+}
+
+// Mörk bakgrund över hela skärmen
+.image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.85);
+
+  > img {
+    width: 90vw;
+    height: 88vh;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+// Stäng-knappen
+.close-button {
+  position: fixed;
+  top: 2rem;
+  right: 2.5rem;
+  z-index: 10000;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 3.5rem;
+  line-height: 1;
+  cursor: pointer;
 }

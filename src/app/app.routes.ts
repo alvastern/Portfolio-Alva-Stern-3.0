@@ -13,5 +13,4 @@ export const routes: Routes = [
   { path: 'dizparc', component: Dizparc },
   { path: 'pizza-basilico', component: PizzaBasilico },
   { path: 'eleiko', component: Eleiko }
-
 ];
