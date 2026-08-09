@@ -9,7 +9,7 @@ main {
 
   width: 100%;
   margin: 0;
-  overflow: hidden;
+  overflow-x: clip;
   background: #fff;
 
   *,
@@ -47,43 +47,52 @@ main > section:nth-of-type(1) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 5rem;
+  gap: 15rem;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   color: #fff;
-  background: #050805;
+  background: transparent;
+  isolation: isolate;
 
+  // Fullbredd bakgrundsbild
   &::after {
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
 
     background-image: url("/images/Pizza Basilico/pizza-homepage.png");
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: auto 100%;
+    background-size: 50% 100%;
 
     z-index: 0;
-    }
+  }
 
+  // Fullbredd gradient
   &::before {
     content: "";
     position: absolute;
-    inset: 0;
-    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
 
     background: linear-gradient(
-        90deg,
-        rgba(60, 17, 17, 0.92) 0%,
-        rgba(44, 11, 9, 0.88) 28%,
-        rgba(18, 18, 18, 0.90) 48%
+      90deg,
+      rgba(60, 17, 17, 0.95) 0%,
+      rgba(44, 11, 9, 0.91) 34%,
+      rgba(18, 18, 18, 0.91) 50%,
+      rgba(18, 18, 18, 0.88) 100%
     );
 
+    z-index: 1;
     pointer-events: none;
-    }
+  }
 
   > div {
     position: relative;
@@ -219,7 +228,22 @@ main > section:nth-of-type(4) > div > aside {
 main > section:nth-of-type(2) {
   padding: 6rem 5rem;
   color: #fff;
-  background: #000;
+
+  position: relative;
+  background: transparent;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: #000;
+    z-index: -1;
+  }
 
   > aside {
     h3 {
@@ -295,7 +319,22 @@ main > section:nth-of-type(2) {
 main > section:nth-of-type(3) {
   padding: 6rem 5rem;
   color: var(--text-dark);
-  background: #fff;
+
+  position: relative;
+  background: transparent;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: #fff;
+    z-index: -1;
+  }
 
   > aside {
     h3 {
@@ -348,7 +387,21 @@ main > section:nth-of-type(3) {
 // Development process
 main > section:nth-of-type(4) {
   color: #fff;
-  background: var(--brown);
+  position: relative;
+  background: transparent;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: var(--brown);
+    z-index: -2;
+  }
 
   > h2 {
     margin: 0;
@@ -364,12 +417,40 @@ main > section:nth-of-type(4) {
 
   > div:nth-of-type(even) {
     color: var(--text-dark);
-    background: #fff;
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 100vw;
+      transform: translateX(-50%);
+      background: #fff;
+      z-index: -1;
+    }
   }
 
   > div:nth-of-type(odd) {
     color: #fff;
-    background: var(--brown);
+    position: relative;
+    isolation: isolate;
+    background: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 100vw;
+      transform: translateX(-50%);
+      background: var(--brown);
+      z-index: -1;
+    }
   }
 
   aside {
@@ -472,7 +553,22 @@ main > section:nth-of-type(5) {
   align-items: center;
   gap: 5rem;
   color: #fff;
-  background: #000;
+
+  position: relative;
+  background: transparent;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: #000;
+    z-index: -1;
+  }
 
   > div {
     max-width: 34rem;
@@ -510,7 +606,22 @@ main > section:nth-of-type(6) {
   gap: 5rem;
 
   color: var(--text-dark);
-  background: #fff;
+
+  position: relative;
+  background: transparent;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: #fff;
+    z-index: -1;
+  }
 
   > img {
     width: min(100%, 24rem);
@@ -549,7 +660,22 @@ main > section:nth-of-type(7) {
   align-items: center;
   gap: 5rem;
   color: #fff;
-  background: #000;
+
+  position: relative;
+  background: transparent;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: #000;
+    z-index: -1;
+  }
 
   > div {
     max-width: 34rem;
@@ -580,110 +706,6 @@ main > section:nth-of-type(7) {
     max-height: 15rem;
     justify-self: center;
     object-fit: contain;
-  }
-}
-
-/* RESPONSIVITET */
-@media (max-width: 1000px) {
-  main > section:nth-of-type(1) {
-    min-height: auto;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    background: #2d1114;
-
-    &::after {
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.24;
-    }
-
-    &::before {
-      background: rgba(0, 0, 0, 0.65);
-    }
-
-    > div:first-child,
-    > div:last-child {
-      max-width: 100%;
-    }
-
-    > div:first-child {
-      padding-top: 4rem;
-    }
-  }
-
-  main > section:nth-of-type(2),
-  main > section:nth-of-type(3),
-  main > section:nth-of-type(4) > div,
-  main > section:nth-of-type(5),
-  main > section:nth-of-type(6),
-  main > section:nth-of-type(7) {
-    grid-template-columns: 1fr;
-  }
-
-  main > section:nth-of-type(2) > aside,
-  main > section:nth-of-type(3) > aside,
-  main > section:nth-of-type(4) > div > aside {
-    padding-right: 0;
-    padding-bottom: 2.5rem;
-
-    &::after {
-      top: auto;
-      right: auto;
-      bottom: 0;
-      left: 0;
-      width: 7rem;
-      height: 1px;
-    }
-  }
-
-  main > section:nth-of-type(6) {
-    &::before {
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    > h2,
-    > article {
-      grid-column: 1;
-    }
-  }
-}
-
-@media (max-width: 650px) {
-  main > section:nth-of-type(1) {
-    padding: 5rem 1.5rem 3rem;
-
-    > div:first-child {
-      > a {
-        top: -3rem;
-      }
-
-      h2 {
-        font-size: 3.2rem;
-      }
-    }
-  }
-
-  main > section:nth-of-type(n + 2) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  main > section:nth-of-type(4) > h2 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    font-size: 2.6rem;
-  }
-
-  main > section:nth-of-type(4) > div > article div {
-    grid-template-columns: 1fr;
-  }
-
-  main > section:nth-of-type(5),
-  main > section:nth-of-type(6),
-  main > section:nth-of-type(7) {
-    gap: 2.5rem;
   }
 }
 

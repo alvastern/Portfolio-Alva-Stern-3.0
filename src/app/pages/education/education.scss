@@ -1,22 +1,24 @@
 #education-page {
-  max-width: 1400px;
   width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 4rem 5rem 5rem;
   box-sizing: border-box;
-  min-height: calc(100vh - 6rem);
-  padding: 2rem 0 3rem 6rem;
+  min-height: calc(100vh - 8rem);
   background: #000;
   color: #fff;
 
   section {
+    width: 100%;
     max-width: 50rem;
-    margin-left: 3rem;
+    margin: 0;
   }
 
   h2 {
-    font-size: 4rem;
-    margin: 0 0 4rem 0;
-    font-weight: 800;
+    margin: 0 0 4rem;
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 900;
   }
 
   article {
@@ -24,35 +26,36 @@
     border-left: 3px solid #b73097;
 
     h3 {
-      font-size: 2rem;
       margin: 0 0 0.8rem;
+      font-size: 2rem;
     }
 
     h4 {
+      margin: 0 0 0.8rem;
       color: #b73097;
       font-size: 1.2rem;
-      margin: 0 0 0.8rem;
     }
 
     h5 {
-      font-size: 0.95rem;
       margin: 0 0 2rem;
+      font-size: 0.95rem;
     }
 
     p {
       max-width: 40rem;
-      line-height: 1.65;
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.82);
       margin: 0;
+      color: white;
+      font-size: 0.95rem;
+      line-height: 1.65;
     }
   }
 
   hr {
-    border: none;
-    height: 1px;
-    background: rgba(0, 0, 0, 0.25);
-    margin: 2rem;
+    width: 100%;
     max-width: 44rem;
+    height: 1px;
+    margin: 3rem 0;
+    border: none;
+    background: black;
   }
 }
