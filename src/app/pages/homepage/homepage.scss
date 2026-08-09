@@ -1,74 +1,86 @@
+$accent: #b73097;
+$accent-hover: #ca38aa;
+$accent-light: #d743b7;
+$black: #000;
+$white: #fff;
+
+
 // Presentation av mig själv
 #home-presentation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4rem;
-  padding: 0 5rem 2rem;
-  background-color: black;
-  color: white;
-  height: calc(100vh - 7rem);
-  box-sizing: border-box;
-  max-width: 1400px;
   width: 100%;
+  max-width: 1760px;
+  min-height: calc(100vh - 7rem);
   margin: 0 auto;
+  padding: 4rem 5rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(30rem, 0.92fr);
+  align-items: center;
+  gap: 7rem;
+  background: $black;
+  color: $white;
 
   section:first-child {
-    max-width: 42rem;
-    flex: 1;
+    width: 100%;
+    max-width: 54rem;
   }
 
   section:last-child {
+    width: 100%;
+    max-width: 42rem;
     display: flex;
     justify-content: center;
-    flex: 1;
+    align-items: center;
   }
 
-  p {
-    max-width: 40rem;
-    line-height: 1.4;
-    font-size: 1rem;
+  > section:first-child > p {
+    max-width: 49rem;
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.55;
   }
 
   article {
+    margin: 2.6rem 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
-    margin: 2rem 0;
 
     > div {
+      min-width: 15rem;
       display: grid;
       grid-template-columns: auto 1fr;
       column-gap: 1rem;
       align-items: center;
 
-      div {
+      > div {
         grid-row: span 2;
-        width: 2.3rem;
-        height: 2.3rem;
-        border-radius: 50%;
-        background-color: rgba(183, 48, 151, 0.35);
+        width: 2.8rem;
+        height: 2.8rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #fff;
+        border-radius: 50%;
+        background: rgba(183, 48, 151, 0.35);
+        color: $white;
       }
 
       p {
         margin: 0;
-        font-size: 0.85rem;
-        line-height: 1.25;
+        font-size: 0.95rem;
+        line-height: 1.3;
       }
     }
   }
 
   button {
-    background-color: #b73097;
-    color: #000;
+    padding: 1.35rem 2.7rem;
     border: none;
     border-radius: 5rem;
-    padding: 1.2rem 2.2rem;
+    background: $accent;
+    color: #000;
+    font-size: 1.1rem;
     font-weight: 700;
-    font-size: 1rem;
     cursor: pointer;
   }
 }
@@ -80,55 +92,147 @@
 }
 
 #hi-rubrik {
-  font-size: 1.5rem;
-  color: #b73097;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.6rem;
+  color: $accent;
+  font-size: 1.7rem;
 }
 
 #hi-line {
+  width: 5.5rem;
+  height: 2px;
   margin: 0;
   border: none;
-  height: 2px;
-  width: 4rem;
-  background: #b73097;
+  background: $accent;
 }
 
 #name-rubrik {
-  font-size: 4.5rem;
-  margin: 0.5rem 0 0.5rem 0;
-  line-height: 1;
+  margin: 0.5rem 0;
+  font-size: 6.4rem;
+  line-height: 0.95;
   font-weight: 900;
 }
 
 #title-rubrik {
-  color: #b73097;
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.8rem;
+  color: $accent;
+  font-size: 2rem;
 }
 
 #potrait-image {
-  width: 25rem;
+  width: 34rem;
+  max-width: 100%;
   height: auto;
-  filter: drop-shadow(0 0 5rem rgba(183, 48, 151, 0.75));
-  margin-bottom: 2rem;
+  filter: drop-shadow(0 0 6rem rgba(183, 48, 151, 0.75));
 }
 
-// Presentation för projekt - Dizparc
-#dizparc-project {
+
+// Presentation av projekt
+#dizparc-project,
+#pizza-project,
+#eleiko-project {
+  width: 100%;
+  max-width: none;
   min-height: 100vh;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 6rem 5rem;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 10rem;
-  color: white;
   position: relative;
   overflow: hidden;
+  color: $white;
   background: #050805;
 
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  section:first-child {
+    width: min(78%, 48rem);
+    justify-self: center;
+
+    h2 {
+      margin: 0 0 2.2rem;
+      color: $accent;
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 6.6rem;
+      line-height: 1.02;
+      font-weight: 800;
+    }
+
+    hr {
+      width: 9.5rem;
+      height: 2px;
+      margin: 3.2rem 0;
+      border: none;
+      background: $accent;
+    }
+
+    p {
+      max-width: 42rem;
+      margin-bottom: 3.2rem;
+      font-size: 1.3rem;
+      line-height: 1.55;
+    }
+
+    button {
+      padding: 1.4rem 2.8rem;
+      border: none;
+      border-radius: 5rem;
+      background: $accent;
+      color: $white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+
+  section:last-child {
+    width: min(78%, 42rem);
+    justify-self: center;
+
+    article {
+      h4 {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin: 0 0 0.45rem;
+        color: $accent;
+        font-size: 1.3rem;
+      }
+
+      i {
+        width: 2rem;
+        text-align: left;
+      }
+
+      p {
+        margin: 0;
+        color: $white;
+        font-size: 1.15rem;
+        line-height: 1.5;
+      }
+    }
+
+    > hr {
+      width: 100%;
+      height: 1px;
+      margin: 1.9rem 0;
+      border: none;
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+
+// Dizparc - projekt
+#dizparc-project {
   &::after {
     content: "";
     position: absolute;
@@ -138,8 +242,8 @@
     height: 100%;
     background-image: url("/images/my-page-homepage.png");
     background-repeat: no-repeat;
-    background-position: left center;
-    background-size: auto 100%;
+    background-position: center;
+    background-size: cover;
     z-index: 0;
   }
 
@@ -147,104 +251,22 @@
     content: "";
     position: absolute;
     inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(80, 96, 69, 0.94) 0%,
+      rgba(47, 61, 38, 0.90) 34%,
+      rgba(18, 18, 18, 0.92) 50%,
+      rgba(18, 18, 18, 0.88) 100%
+    );
+
     z-index: 1;
-    background: linear-gradient(90deg, rgba(80, 96, 69, 0.92) 0%, rgba(47, 61, 38, 0.88) 28%, rgba(18, 18, 18, 0.95) 48%,);
-  }
-
-  > * {
-    position: relative;
-    z-index: 2;
-  }
-
-  section:first-child {
-    max-width: 33rem;
-
-    h2 {
-      color: #b73097;
-      font-size: 1rem;
-      margin: 0 0 2rem;
-    }
-
-    h3 {
-      font-size: 4.5rem;
-      line-height: 1.1;
-      margin: 0;
-    }
-
-    hr {
-      width: 8rem;
-      height: 2px;
-      border: none;
-      background: #b73097;
-      margin: 3rem 0;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.5;
-      max-width: 30rem;
-      margin-bottom: 3rem;
-    }
-
-    button {
-      background: #b73097;
-      color: white;
-      border: none;
-      border-radius: 5rem;
-      padding: 1.2rem 2.2rem;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-    }
-  }
-
-  section:last-child {
-    max-width: 28rem;
-
-    article {
-      h4 {
-        color: #b73097;
-        margin: 0 0 0.3rem;
-        font-size: 1rem;
-      }
-
-      i {
-        width: 1.8rem;
-        margin-bottom: 0.25rem;
-      }
-
-      p {
-        margin: 0;
-        line-height: 1.35;
-        font-size: 1rem;
-      }
-    }
-
-    hr {
-      border: none;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.5);
-      margin: 1.5rem 0;
-    }
+    pointer-events: none;
   }
 }
 
-// Presentation för projekt - Pizza Basilico
-#pizza-project {
-  min-height: 100vh;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 6rem 5rem;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 10rem;
-  color: white;
-  position: relative;
-  overflow: hidden;
-  background: #050805;
 
+// Pizza Basilico - projekt
+#pizza-project {
   &::after {
     content: "";
     position: absolute;
@@ -254,8 +276,8 @@
     height: 100%;
     background-image: url("/images/pizza-homepage.png");
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto 100%;
+    background-position: center;
+    background-size: cover;
     z-index: 0;
   }
 
@@ -263,104 +285,22 @@
     content: "";
     position: absolute;
     inset: 0;
+
+    background: linear-gradient(
+      90deg,
+      rgba(60, 17, 17, 0.95) 0%,
+      rgba(44, 11, 9, 0.91) 34%,
+      rgba(18, 18, 18, 0.91) 50%,
+      rgba(18, 18, 18, 0.88) 100%
+    );
+
     z-index: 1;
-    background: linear-gradient(90deg,rgba(60, 17, 17, 0.92) 0%, rgba(44, 11, 9, 0.88) 28%, rgba(18, 18, 18, 0.90) 48%);
-  }
-
-  > * {
-    position: relative;
-    z-index: 2;
-  }
-
-  section:first-child {
-    max-width: 33rem;
-
-    h2 {
-      color: #b73097;
-      font-size: 1rem;
-      margin: 0 0 2rem;
-    }
-
-    h3 {
-      font-size: 4.5rem;
-      line-height: 1.1;
-      margin: 0;
-    }
-
-    hr {
-      width: 8rem;
-      height: 2px;
-      border: none;
-      background: #b73097;
-      margin: 3rem 0;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.5;
-      max-width: 30rem;
-      margin-bottom: 3rem;
-    }
-
-    button {
-      background: #b73097;
-      color: white;
-      border: none;
-      border-radius: 5rem;
-      padding: 1.2rem 2.2rem;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-    }
-  }
-
-  section:last-child {
-    max-width: 28rem;
-
-    article {
-      h4 {
-        color: #b73097;
-        margin: 0 0 0.3rem;
-        font-size: 1rem;
-      }
-
-      i {
-        width: 1.8rem;
-        margin-bottom: 0.25rem;
-      }
-
-      p {
-        margin: 0;
-        line-height: 1.35;
-        font-size: 1rem;
-      }
-    }
-
-    hr {
-      border: none;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.5);
-      margin: 1.5rem 0;
-    }
+    pointer-events: none;
   }
 }
 
-// Presentation för projekt - ELEIKO
+// ELEIKO - projekt
 #eleiko-project {
-  min-height: 100vh;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 6rem 5rem;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 10rem;
-  color: white;
-  position: relative;
-  overflow: hidden;
-  background: #050805;
-
   &::after {
     content: "";
     position: absolute;
@@ -370,8 +310,8 @@
     height: 100%;
     background-image: url("/images/eleiko-homepage.png");
     background-repeat: no-repeat;
-    background-position: left center;
-    background-size: auto 100%;
+    background-position: center;
+    background-size: cover;
     z-index: 0;
   }
 
@@ -379,113 +319,51 @@
     content: "";
     position: absolute;
     inset: 0;
+
+    background: linear-gradient(
+      90deg,
+      rgba(12, 48, 58, 0.95) 0%,
+      rgba(15, 35, 42, 0.91) 34%,
+      rgba(18, 18, 18, 0.91) 50%,
+      rgba(18, 18, 18, 0.88) 100%
+    );
+
     z-index: 1;
-    background: linear-gradient(90deg, rgba(12, 48, 58, 0.94) 0%, rgba(15, 35, 42, 0.90) 28%, rgba(18, 18, 18, 0.90) 48%);
-  }
-
-  > * {
-    position: relative;
-    z-index: 2;
-  }
-
-  section:first-child {
-    max-width: 33rem;
-
-    h2 {
-      color: #b73097;
-      font-size: 1rem;
-      margin: 0 0 2rem;
-    }
-
-    h3 {
-      font-size: 4.5rem;
-      line-height: 1.1;
-      margin: 0;
-    }
-
-    hr {
-      width: 8rem;
-      height: 2px;
-      border: none;
-      background: #b73097;
-      margin: 3rem 0;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.5;
-      max-width: 30rem;
-      margin-bottom: 3rem;
-    }
-
-    button {
-      background: #b73097;
-      color: white;
-      border: none;
-      border-radius: 5rem;
-      padding: 1.2rem 2.2rem;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-    }
-  }
-
-  section:last-child {
-    max-width: 28rem;
-
-    article {
-      h4 {
-        color: #b73097;
-        margin: 0 0 0.3rem;
-        font-size: 1rem;
-      }
-
-      i {
-        width: 1.8rem;
-        margin-bottom: 0.25rem;
-      }
-
-      p {
-        margin: 0;
-        line-height: 1.35;
-        font-size: 1rem;
-      }
-    }
-
-    hr {
-      border: none;
-      height: 1px;
-      background: rgba(255, 255, 255, 0.5);
-      margin: 1.5rem 0;
-    }
+    pointer-events: none;
   }
 }
 
-// Animationer för knappar
+// Knappar
 .project-button {
   transition:
     transform 0.25s ease,
-    box-shadow 0.25s ease;
-
-  &::before {
-    content: "";
-    transition: left 0.45s ease;
-  }
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(197, 118, 179, 0.35);
+    background-color: $accent-hover;
+    box-shadow: 0 6px 18px rgba(197, 118, 179, 0.35);
+  }
+
+  &:active {
+    transform: translateY(-1px) scale(0.98);
   }
 }
 
-// Sektion för mina färdigheter
+// My skills - section
 #skills-section {
-  background: #000;
-  color: #fff;
-  padding: 6rem 5rem 3rem 5rem;
-  max-width: 1400px;
+  width: 100%;
+  max-width: 1760px;
   margin: 0 auto;
+  padding: 7rem 5rem;
   box-sizing: border-box;
+  background: $black;
+  color: $white;
+
+  section {
+    width: 100%;
+  }
 
   section > div:first-child {
     display: flex;
@@ -493,50 +371,51 @@
     gap: 1.5rem;
 
     h2 {
-      color: #b73097;
-      font-size: 1.4rem;
       margin: 0;
+      color: $accent;
+      font-size: 1.6rem;
     }
 
     hr {
-      width: 4rem;
+      width: 4.5rem;
       height: 2px;
-      border: none;
-      background: #b73097;
       margin: 0;
+      border: none;
+      background: $accent;
     }
   }
 
   h3 {
-    font-size: 5rem;
-    margin: 1.5rem 0 3rem;
+    margin: 1.5rem 0 4rem;
+    font-size: 5.8rem;
     line-height: 1;
     font-weight: 800;
   }
 
   article {
-    margin-bottom: 4rem;
+    margin-bottom: 4.8rem;
 
     h4 {
-      color: #b73097;
-      font-size: 1.6rem;
-      margin: 0 0 1.5rem;
+      margin: 0 0 1.6rem;
+      color: $accent;
+      font-size: 1.8rem;
     }
 
     > div {
+      width: 100%;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem 1.5rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem 1.7rem;
     }
 
     > div > div {
-      border: 1.5px solid #b73097;
-      border-radius: 0.8rem;
-      padding: 1rem 1.5rem;
-      min-height: 3.2rem;
+      min-height: 4.4rem;
+      padding: 1.1rem 1.5rem;
       display: flex;
       align-items: center;
       box-sizing: border-box;
+      border: 1.5px solid $accent;
+      border-radius: 0.8rem;
 
       transition:
         transform 0.25s ease,
@@ -546,16 +425,15 @@
 
       &:hover {
         transform: translateY(-3px);
-        background-color: rgba(183, 48, 151, 0.16);
-        border-color: #d743b7;
-
+        background: rgba(183, 48, 151, 0.16);
+        border-color: $accent-light;
         box-shadow:
           0 8px 20px rgba(183, 48, 151, 0.25),
           0 0 16px rgba(183, 48, 151, 0.12);
 
         i {
           transform: scale(1.2);
-          color: #d743b7;
+          color: $accent-light;
         }
       }
     }
@@ -565,12 +443,12 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     i {
-      font-size: 1.3rem;
-      width: 1.5rem;
+      width: 1.6rem;
+      font-size: 1.4rem;
       text-align: center;
 
       transition:
@@ -580,112 +458,431 @@
   }
 }
 
-// Sektion för att kontakta mig
+// Concatct section
 #contact-section {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  height: 100vh;
-  padding: 6rem 5rem;
-  display: flex;
-  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 6rem 7rem;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 55rem)
+    minmax(22rem, 38rem);
+
+  justify-content: center;
+  align-items: center;
+  gap: clamp(6rem, 9vw, 12rem);
+
   overflow: hidden;
-  background: linear-gradient(135deg,#34102f 0%,#2a0d25 45%,#1d0818 100%);
   color: #fff;
 
+  background: linear-gradient(
+    135deg,
+    #34102f 0%,
+    #2a0d25 45%,
+    #1d0818 100%
+  );
+
+  // Sken bakom brev
   &::before {
     content: "";
     position: absolute;
-    width: 28rem;
-    height: 28rem;
-    right: 6rem;
     top: 50%;
+    right: 8%;
+    width: 38rem;
+    height: 38rem;
     transform: translateY(-50%);
     border-radius: 50%;
     background: rgba(183, 48, 151, 0.22);
-    filter: blur(6rem);
-    z-index: 0;
+    filter: blur(7rem);
+    pointer-events: none;
   }
 
+  // Brev-ikon
   &::after {
     content: "\f0e0";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    position: absolute;
-    right: 8rem;
-    bottom: 6rem;
-    font-size: 14rem;
-    color: rgba(255, 255, 255, 0.04);
-    z-index: 0;
-  }
-
-  section {
-    max-width: 38rem;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
     position: relative;
+    font-size: clamp(17rem, 17vw, 23rem);
+    color: rgba(255, 255, 255, 0.07);
     z-index: 1;
   }
 
-  section > div:first-child {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+  > section {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    max-width: 55rem;
+    position: relative;
+    z-index: 2;
 
-    h2 {
-      margin: 0;
+    > div:first-child {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      h2 {
+        margin: 0;
+        color: #e04bc0;
+        font-size: 2rem;
+      }
+
+      hr {
+        width: 5.5rem;
+        height: 2px;
+        margin: 0;
+        border: none;
+        background: #e04bc0;
+      }
+    }
+
+    > h3 {
+      margin: 1.5rem 0;
+      font-size: clamp(6rem, 5vw, 7.5rem);
+      line-height: 1;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    > hr {
+      width: 8rem;
+      height: 2px;
+      margin: 2.5rem 0 3rem;
+      border: none;
+      background: #e04bc0;
+    }
+
+    p {
+      max-width: 50rem;
+      margin-bottom: 1.7rem;
+      color: white;
+      font-size: 1.35rem;
+      line-height: 1.6;
+    }
+
+    strong {
       color: #e04bc0;
+    }
+
+    h4 {
+      margin-top: 2.5rem;
+      color: #fff;
       font-size: 1.5rem;
     }
 
+    a {
+      color: #fff;
+      transition: color 0.25s ease;
+
+      &:hover {
+        color: #e04bc0;
+      }
+    }
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP SCALE — INGA MEDIA QUERIES
+   Detta block ligger sist med flit så att det styr grundlayouten.
+   ========================================================= */
+
+/* ---------- HOME ---------- */
+#home-presentation {
+  max-width: 2100px;
+  min-height: calc(100vh - 7rem);
+  padding: 4rem 6rem;
+
+  grid-template-columns: minmax(0, 1.08fr) minmax(38rem, 0.92fr);
+  gap: 9rem;
+
+  section:first-child {
+    max-width: 68rem;
+  }
+
+  section:last-child {
+    max-width: 50rem;
+  }
+
+  > section:first-child > p {
+    max-width: 62rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+
+  article {
+    margin: 3.4rem 0;
+    gap: 4.5rem;
+
+    > div {
+      min-width: 19rem;
+
+      > div {
+        width: 3.6rem;
+        height: 3.6rem;
+
+        i {
+          font-size: 1.3rem;
+        }
+      }
+
+      p {
+        font-size: 1.15rem;
+        line-height: 1.35;
+      }
+    }
+  }
+
+  button {
+    padding: 1.65rem 3.3rem;
+    font-size: 1.25rem;
+  }
+}
+
+#hi-rubrik {
+  font-size: 2.1rem;
+}
+
+#hi-line {
+  width: 7.5rem;
+}
+
+#name-rubrik {
+  font-size: 9rem;
+  line-height: 0.92;
+}
+
+#title-rubrik {
+  font-size: 2.9rem;
+  margin-bottom: 2.4rem;
+}
+
+#potrait-image {
+  width: 46rem;
+  max-width: 100%;
+}
+
+
+/* ---------- PROJECTS ---------- */
+#dizparc-project,
+#pizza-project,
+#eleiko-project {
+  min-height: 100vh;
+
+  section:first-child {
+    width: min(82%, 56rem);
+
+    h2 {
+      font-size: 1.45rem;
+      margin-bottom: 2.5rem;
+    }
+
+    h3 {
+      font-size: 7.8rem;
+      line-height: 1.02;
+    }
+
     hr {
-      width: 3.5rem;
-      height: 2px;
-      border: none;
-      background: #e04bc0;
-      margin: 0;
+      width: 11rem;
+      margin: 3.6rem 0;
+    }
+
+    p {
+      max-width: 50rem;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      margin-bottom: 3.5rem;
+    }
+
+    button {
+      padding: 1.6rem 3.2rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  section:last-child {
+    width: min(82%, 49rem);
+
+    article {
+      h4 {
+        font-size: 1.55rem;
+        margin-bottom: 0.65rem;
+        gap: 0.7rem;
+      }
+
+      i {
+        width: 2.4rem;
+        font-size: 1.35rem;
+      }
+
+      p {
+        font-size: 1.38rem;
+        line-height: 1.55;
+      }
+    }
+
+    > hr {
+      margin: 2.3rem 0;
+    }
+  }
+}
+
+
+/* ---------- SKILLS ---------- */
+#skills-section {
+  max-width: 2100px;
+  min-height: 100vh;
+
+  padding: 9rem 6rem;
+
+  display: flex;
+  align-items: center;
+
+  > section {
+    width: 100%;
+  }
+
+  section > div:first-child {
+    gap: 2rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    hr {
+      width: 6rem;
     }
   }
 
   h3 {
-    font-size: 5rem;
-    line-height: 1;
-    margin: 1.5rem 0;
-    font-weight: 800;
+    font-size: 7.8rem;
+    margin: 2rem 0 5.5rem;
   }
 
-  > section > hr {
-    width: 6rem;
-    height: 2px;
-    border: none;
-    background: #e04bc0;
-    margin: 2rem 0 3rem;
+  article {
+    margin-bottom: 5.5rem;
+
+    h4 {
+      font-size: 2.3rem;
+      margin-bottom: 2rem;
+    }
+
+    > div {
+      gap: 1.7rem 2.1rem;
+    }
+
+    > div > div {
+      min-height: 5.8rem;
+      padding: 1.5rem 2rem;
+      border-radius: 1rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      gap: 1.2rem;
+    }
+
+    i {
+      width: 1.9rem;
+      font-size: 1.65rem;
+    }
+  }
+}
+
+
+// Contact section
+#contact-section {
+  width: 100vw;
+  max-width: none;
+  min-height: 100vh;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7rem 8rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 66rem)
+    minmax(28rem, 44rem);
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10rem;
+
+  overflow: hidden;
+
+  &::before {
+    top: 50%;
+    right: 8%;
+    width: 44rem;
+    height: 44rem;
   }
 
-  p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 1.5rem;
+  &::after {
+    grid-column: 2;
+    grid-row: 1;
+
+    justify-self: center;
+    align-self: center;
+
+    font-size: 25rem;
+
+    color: rgba(255, 255, 255, 0.075);
   }
 
-  strong {
-    color: #e04bc0;
-  }
+  > section {
+    grid-column: 1;
+    grid-row: 1;
 
-  h4 {
-    margin-top: 2.5rem;
-    font-size: 1.25rem;
-    color: #fff;
-  }
+    width: 100%;
+    max-width: 66rem;
 
-  a {
-    color: #fff;
-    text-decoration-thickness: 2px;
-    transition: color 0.25s ease;
+    > div:first-child {
+      gap: 2rem;
 
-    &:hover {
-      color: #e04bc0;
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      hr {
+        width: 6rem;
+      }
+    }
+
+    > h3 {
+      font-size: 8.4rem;
+      line-height: 0.95;
+      margin: 1.8rem 0;
+      white-space: nowrap;
+    }
+
+    > hr {
+      width: 9rem;
+      margin: 2.8rem 0 3.5rem;
+    }
+
+    p {
+      max-width: 60rem;
+      font-size: 1.5rem;
+      line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+
+    h4 {
+      font-size: 1.7rem;
+      margin-top: 2.8rem;
     }
   }
 }
