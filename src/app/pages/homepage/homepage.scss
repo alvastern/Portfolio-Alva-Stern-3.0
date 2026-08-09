@@ -461,6 +461,23 @@
   }
 }
 
+// Animationer för knappar
+.project-button {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &::before {
+    content: "";
+    transition: left 0.45s ease;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(197, 118, 179, 0.35);
+  }
+}
+
 // Sektion för mina färdigheter
 #skills-section {
   background: #000;
@@ -520,6 +537,27 @@
       display: flex;
       align-items: center;
       box-sizing: border-box;
+
+      transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        background-color: rgba(183, 48, 151, 0.16);
+        border-color: #d743b7;
+
+        box-shadow:
+          0 8px 20px rgba(183, 48, 151, 0.25),
+          0 0 16px rgba(183, 48, 151, 0.12);
+
+        i {
+          transform: scale(1.2);
+          color: #d743b7;
+        }
+      }
     }
 
     p {
@@ -534,6 +572,10 @@
       font-size: 1.3rem;
       width: 1.5rem;
       text-align: center;
+
+      transition:
+        transform 0.25s ease,
+        color 0.25s ease;
     }
   }
 }
@@ -638,11 +680,12 @@
   }
 
   a {
-    color: #e04bc0;
+    color: #fff;
     text-decoration-thickness: 2px;
+    transition: color 0.25s ease;
 
     &:hover {
-      color: #fff;
+      color: #e04bc0;
     }
   }
 }

@@ -11,7 +11,7 @@ body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(75px);
+  transform: translateY(50px);
 }
 
 .reveal.reveal-visible {
@@ -21,7 +21,7 @@ body {
 @keyframes reveal-up {
   from {
     opacity: 0;
-    transform: translateY(75px);
+    transform: translateY(50px);
   }
 
   to {
