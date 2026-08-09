@@ -1,6 +1,6 @@
 <main>
     <section>
-        <div>
+        <div appReveal>
             <a routerLink="/"><i class="fa-solid fa-arrow-left"></i></a>
             <h1>DESIGN STUDIO</h1>
             <h2>Strength as a Service</h2>
@@ -12,7 +12,7 @@
                 business model.</p>
         </div>
 
-        <div>
+        <div appReveal>
             <article>
                 <h4><i class="fa-regular fa-user"></i>CLIENT</h4>
                 <p>ELEIKO</p>
@@ -51,7 +51,7 @@
     </section>
 
     <section>
-        <aside>
+        <aside appReveal>
             <h3>Background & motivation</h3>
 
             <article>
@@ -69,7 +69,7 @@
             </article>
         </aside>
 
-        <article>
+        <article appReveal>
             <p>This project explored how a service could be designed to enable customers to 
                 rent training equipment while providing Eleiko with valuable insights into product 
                 usage. The aim was to support a transition towards a more circular business model by 
@@ -94,10 +94,10 @@
     </section>
 
     <section>
-        <h2>Design Process</h2>
+        <h2 appReveal>Design Process</h2>
 
         <div>
-            <aside>
+            <aside appReveal>
                 <h3>Preparatory Work</h3>
 
                 <p>Preparatory work was conducted to understand Eleiko's current situation, sustainability 
@@ -106,7 +106,7 @@
                     realistic service concepts.</p>
             </aside>
 
-            <article>
+            <article appReveal>
                 <div>
                     <h4>Domain Knowledge</h4>
                     <p>I acquired domain knowledge by desktop research to ensure I had an understanding 
@@ -118,17 +118,26 @@
                 <div>
                     <h4>SWOT Analysis</h4>
                     <p>A SWOT analysis was conducted to gain a better understanding of Eleiko's current position 
-                        and its ability to transition towards a circular business model. The analysis helped 
-                        highlight key factors that could influence the development and success of future 
+                        and its ability to transition towards a circular business model. The analysis 
+                        highlighted key factors that could influence the development of future 
                         service concepts.</p>
                 </div>
 
-                <img src="../../../../images/ELEIKO/SWOT.png">
+                <img src="../../../../images/ELEIKO/SWOT.png" alt="SWOT-analysis" class="clickable-image" (click)="openImage('../../../../images/ELEIKO/SWOT.png')">
+
+                <div>
+                    <h4>Sustainability Analysis</h4>
+                    <p>A sustainability analysis was conducted to evaluate the environmental and social 
+                        impact of Eleiko's current operations, and identify opportunities for improvement 
+                        in their transition towards a circular business model.</p>
+                </div>
+
+                <img src="../../../../images/ELEIKO/sustainability-analysis.png" alt="Sustainability-analysis" class="clickable-image" (click)="openImage('../../../../images/ELEIKO/sustainability-analysis.png')">
             </article>
         </div>
 
         <div>
-            <aside>
+            <aside appReveal>
                 <h3>Research</h3>
 
                 <p>Research was conducted to understand customer needs, behaviors, and challenges 
@@ -137,7 +146,7 @@
                     Eleiko's transition towards a circular business model.</p>
             </aside>
 
-            <article>
+            <article appReveal>
                 <div>
                     <h4>Interviews</h4>
                     <p>An interview guide was created to make sure relevant and conceived data, 
@@ -155,24 +164,24 @@
                         Then the data was visualized with themes and categories to make the data 
                         easier to understand.</p>
                     
-                    <img src="../../../../images/ELEIKO/compile-data.png">
+                    <img src="../../../../images/ELEIKO/compile-data.png" alt="Visualization of the compiled data" class="clickable-image" (click)="openImage('../../../../images/ELEIKO/compile-data.png')">
                 </div>
 
                 <div>
                     <h4>Stakeholder map</h4>
-                    <p>The relevant stakeholders was identified by creating a stakeholder map. 
-                        The purpose of this was to undertand which actors Eleiko currently 
+                    <p>The relevant stakeholders was identified by a stakeholder map. 
+                        The purpose was to undertand which actors Eleiko currently 
                         collaborated with, as well as other actors that could be important for 
-                        Eleiko’s future network in a circular business model instead of a linear.</p>
+                        Eleiko’s future network in a circular business model.</p>
 
-                    <img src="../../../../images/ELEIKO/stakeholder-map.png">
+                    <img src="../../../../images/ELEIKO/stakeholder-map.png" alt="Stakeholder map" class="clickable-image" (click)="openImage('../../../../images/ELEIKO/stakeholder-map.png')">
                 </div>
             </article>
         </div>
 
         <div>
-            <aside>
-                <h3>Current state & Concept definition</h3>
+            <aside appReveal>
+                <h3>Current state & Concepts</h3>
 
                 <p>This phase focused on defining and developing service concepts based on the 
                     research findings. By mapping current and future customer journeys and 
@@ -180,25 +189,23 @@
                     and translated into feasible service solutions.</p>
             </aside>
 
-            <article>
+            <article appReveal>
                 <div>
                     <h4>Current customer journey map</h4>
-                    <p>Based on the data, a customer journey map was developem to visualize 
+                    <p>Based on the research, a customer journey map was developed to visualize 
                         the customer’s experience with Eleiko's current purchasing process. 
-                        The map includes a scenario based on the research, the customers 
+                        The map includes a scenario, the customers 
                         experience, emotions, pain points and opportunities.</p>
 
-                    <img src="../../../../images/ELEIKO/current-customer-journey-map.png">
+                    <img src="../../../../images/ELEIKO/current-customer-journey-map.png" alt="Current customer journey map" class="clickable-image" (click)="openImage('../../../../images/ELEIKO/current-customer-journey-map.png')">
                 </div>
 
                 <div>
                     <h4>Concept definition methods</h4>
                     <p>To generate concept ideas, we conducted a brainstorming method called 
-                        brainwriting 6-3-5. Through this, ideas for potential services came out.<br>
-                        <br>
+                        brainwriting 6-3-5. Through this, ideas for potential services came out.
                         After the brainstorming session, an idea evaluation was conducted to sort 
-                        out some of the big amount of ideas.<br> 
-                        <br>
+                        out some of the big amount of ideas.
                         Then, context scenarios were developed for the final ideas to make them 
                         more clear and turned into a concept of an service.</p>
                 </div>
@@ -210,26 +217,26 @@
                         how the developed services positively would transform the purchasing 
                         process for Eleiko’s customers.</p>
 
-                    <img src="../../../../images/ELEIKO/future-customer-journey-map.png">
+                    <img src="../../../../images/ELEIKO/future-customer-journey-map.png" alt="Future customer journey map" class="clickable-image" (click)="openImage('../../../../images/ELEIKO/future-customer-journey-map.png')">
                 </div>
 
                 <div>
                     <h4>Service blueprint</h4>
                     <p>Once the concepts was finalized, a service blueprint was developed for 
-                        each service. The purpose of this was to visualize Eleiko's logistics 
+                        each service. The purpose was to visualize the logistics 
                         and to outline the mandatory steps that both the customers and Eleiko 
                         would need to follow for these services to work in practice.</p>
 
-                    <img src="../../../../images/ELEIKO/blueprint.png">
+                    <img src="../../../../images/ELEIKO/blueprint.png" alt="Service blueprint" class="clickable-image" (click)="openImage('../../../../images/ELEIKO/blueprint.png')">
                 </div>
             </article>
         </div>
     </section>
 
     <section>
-        <h2>Result & Design Solutions</h2>
+        <h2 appReveal>Result & Design Solutions</h2>
 
-        <div>
+        <div appReveal>
             <aside>
                 <h3>Strength as a Service</h3>
                 
@@ -250,11 +257,11 @@
                     refurbished, and used equipment, creating more affordable options for 
                     customers while reducing waste.</p>
 
-                <img src="../../../../images/ELEIKO/SAAS-storyboard.png">
+                <img src="../../../../images/ELEIKO/SAAS-storyboard.png" alt="Storyboard for the concept Strength as a Service" class="clickable-image" (click)="openImage('../../../../images/ELEIKO/SAAS-storyboard.png')">
             </article>
         </div>
 
-        <div>
+        <div appReveal>
             <aside>
                 <h3>EleikoCollect</h3>
 
@@ -277,14 +284,14 @@
                     have their gym dismantled and, if desired, replaced with new equipment.<br>
                     <br>
                     Customers with unused or stored equipment can use EleikoCollect without 
-                    purchasing new items. The equipment is collected free of charge, and the 
+                    purchasing new items. The equipment is collected for free, and the 
                     customer receives a voucher.</p>
 
-                <img src="../../../../images/ELEIKO/EC-storyboard.png">
+                <img src="../../../../images/ELEIKO/EC-storyboard.png" alt="Storyboard for the concept EleikoCollect" class="clickable-image" (click)="openImage('../../../../images/ELEIKO/EC-storyboard.png')">
             </article>
         </div>
 
-        <div>
+        <div appReveal>
             <aside>
                 <h3>Corporate Account</h3>
 
@@ -299,19 +306,19 @@
 
             <article>
                 <p>A corporate account feature can be implemented on Eleiko's website to enable companies 
-                    to gather information in one place. By a corporate account, Eleiko can offer specific 
+                    to gather information in one place. Through this, Eleiko can offer specific 
                     features and tools that are only available to corporate accounts. For example, 
-                    customers could view completed orders and current service agreements, receive better 
-                    support and closer contact with Eleiko and report product damages to receive service 
+                    customers could view completed orders, current service agreements, receive better 
+                    support and report product damages to receive service 
                     for the product.</p>
 
-                <img src="../../../../images/ELEIKO/corporate-account.png">
+                <img src="../../../../images/ELEIKO/corporate-account.png" alt="Wireframe for the corporate account feature" class="clickable-image" (click)="openImage('../../../../images/ELEIKO/corporate-account.png')">
             </article>
         </div>
     </section>
 
     <section>
-        <div>
+        <div appReveal>
             <h2>Potential effects</h2>
             <p>By enabling equipment rental and product recirculation, the concept could reduce 
                 waste, extend product lifespans, and create new revenue opportunities for Eleiko. 
@@ -319,36 +326,43 @@
                 may find purchasing new equipment too costly.</p>
         </div>
 
-        <img src="../../../../images/effect.png">
+        <img src="../../../../images/effect.png" alt="">
     </section>
 
     <section>
-        <h2>Lessons learned</h2>
+        <img src="../../../../images/lessons-learned.png" alt="">
 
-        <article>
-            <p><strong>Through this project, I gained valuable experience in service design and designing 
-                solutions beyond traditional digital interfaces. I developed my ability to work 
-                within complex domains, understand business models, and translate both customer 
-                and business needs into service concepts.</strong><br>
-                <br>
-                The project strengthened my skills in conducting research, defining relevant data 
-                collection methods, and adapting the design process to fit the project's goals.<br>
-                <br>
-                Additionally, collaborating with Eleiko provided practical experience in stakeholder 
-                communication and designing solutions that balance user value, business objectives, 
-                and sustainability ambitions.</p>
-        </article>
+        <div appReveal>
+            <h2>Lessons learned</h2>
+
+            <article>
+                <p>Through this project, I gained valuable experience in service design and designing 
+                    solutions beyond traditional digital interfaces. I developed my ability to work 
+                    within complex domains, understand business models, and translate both customer 
+                    and business needs into service concepts.
+                    I strengthened my skills in conducting research, defining relevant data 
+                    collection methods, and adapting the design process to fit the project's goals.
+                    Additionally, collaborating with Eleiko provided practical experience in stakeholder 
+                    communication and designing solutions that balance user value, business objectives, 
+                    and sustainability ambitions.</p>
+            </article>
+        </div>
     </section>
 
     <section>
-        <div>
+        <div appReveal>
             <h2>Thank You!</h2>
             <p>Thank you for reading about this work, I hope you found it interesting! If you have 
-                any questions, you are more than welcome to <a href="mailto:alva.stern02@gmail.com">contact me</a>.</p>
+                any questions or other thoughts, you are more than welcome to <a href="mailto:alva.stern02@gmail.com">contact me</a>.</p>
         </div>
 
-        <img src="../../../../images/project-finish.png">
+        <img src="../../../../images/project-finish.png" alt="">
     </section>
 </main>
 
 <app-footer></app-footer>
+
+<div class="image-modal" *ngIf="selectedImage" (click)="closeImage()">
+    <button class="close-button" type="button" (click)="closeImage()">&times;</button>
+    <img [src]="selectedImage" alt="Förstorad bild" (click)="$event.stopPropagation()">
+</div>

@@ -8,3 +8,24 @@ body {
     color: white;
     background: linear-gradient( 90deg, #ffffff 0%, #000 25%, #000 75%, #ffffff 100% );
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(75px);
+}
+
+.reveal.reveal-visible {
+  animation: reveal-up 0.75s ease-out forwards;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

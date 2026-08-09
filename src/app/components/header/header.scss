@@ -12,17 +12,51 @@ header {
     box-sizing: border-box;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 80px;
-    
-    li a {
-        color: white;
-        text-decoration: none;
+nav {
+  a {
+    position: relative;
+    color: #B73097;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+
+      width: 0;
+      height: 2px;
+
+      background: #B73097;
+      transition: width 0.5s ease;
     }
+
+    &.active {
+      color: #B73097;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 80px;
+
+  li a {
+    color: white;
+    text-decoration: none;
+
+    &.active {
+      color: #B73097;
+    }
+  }
 }
 
 h1 {
