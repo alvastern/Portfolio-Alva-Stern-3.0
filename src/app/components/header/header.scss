@@ -10,6 +10,21 @@ header {
   margin: 0 auto;
   padding: 0 5rem;
   box-sizing: border-box;
+  position: relative;
+}
+
+.menu-button {
+  display: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #b73097;
+  }
 }
 
 nav {
@@ -24,22 +39,21 @@ nav {
 
     &::after {
       content: "";
-
       position: absolute;
       left: 0;
       bottom: -0.65rem;
       width: 0;
       height: 2px;
-      background: #B73097;
+      background: #b73097;
       transition: width 0.35s ease;
     }
 
     &:hover {
-      color: #B73097;
+      color: #b73097;
     }
 
     &.active {
-      color: #B73097;
+      color: #b73097;
 
       &::after {
         width: 100%;
@@ -63,4 +77,56 @@ h1 {
   font-size: 2.8rem;
   line-height: 1;
   font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  header {
+    height: 7rem;
+    padding: 0 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .menu-button {
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-1rem);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+
+    z-index: 9;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 2.5rem 3rem 3rem;
+    }
+
+    a {
+      font-size: 1.1rem;
+    }
+  }
 }

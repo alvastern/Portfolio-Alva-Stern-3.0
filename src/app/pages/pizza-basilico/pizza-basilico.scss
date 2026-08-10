@@ -54,7 +54,6 @@ main > section:nth-of-type(1) {
   background: transparent;
   isolation: isolate;
 
-  // Fullbredd bakgrundsbild
   &::after {
     content: "";
     position: absolute;
@@ -72,7 +71,6 @@ main > section:nth-of-type(1) {
     z-index: 0;
   }
 
-  // Fullbredd gradient
   &::before {
     content: "";
     position: absolute;
@@ -749,4 +747,441 @@ main > section:nth-of-type(7) {
   font-size: 3.5rem;
   line-height: 1;
   cursor: pointer;
+}
+
+// Mindre laptopas
+@media (max-width: 1180px) {
+  main > section:nth-of-type(1) {
+    padding: 5rem 3.5rem;
+    gap: 6rem;
+
+    > div:first-child {
+      h2 {
+        font-size: 4rem;
+      }
+    }
+
+    > div:last-child {
+      max-width: 25rem;
+    }
+  }
+
+  // Gemensamma tvåkolumnslayouter
+  main > section:nth-of-type(2),
+  main > section:nth-of-type(3),
+  main > section:nth-of-type(4) > div {
+    grid-template-columns: 18rem minmax(0, 1fr);
+    gap: 3.5rem;
+  }
+
+  // Background & motivation
+  main > section:nth-of-type(2) {
+    padding: 5rem 3.5rem;
+  }
+
+  // Solution overview
+  main > section:nth-of-type(3) {
+    padding: 5rem 3.5rem;
+  }
+
+  // Development process
+  main > section:nth-of-type(4) {
+
+    > h2 {
+      padding: 5rem 3.5rem 0;
+    }
+
+    > div {
+      padding: 4rem 3.5rem;
+    }
+  }
+
+  // Potential effects
+  main > section:nth-of-type(5) {
+    padding: 4rem 3.5rem;
+    gap: 3.5rem;
+  }
+
+  // Lessons learned
+  main > section:nth-of-type(6) {
+    padding: 4rem 3.5rem;
+    gap: 3.5rem;
+  }
+
+  // Thank you
+  main > section:nth-of-type(7) {
+    padding: 3rem 3.5rem;
+    gap: 3.5rem;
+  }
+}
+
+// Tablet
+@media (max-width: 900px) {
+  main > section:nth-of-type(1) {
+    min-height: auto;
+
+    padding: 5rem 3rem;
+
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+    &::after {
+      width: 100vw;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.28;
+    }
+
+    &::before {
+      background: linear-gradient(
+        90deg,
+        rgba(60, 17, 17, 0.97) 0%,
+        rgba(52, 15, 15, 0.95) 55%,
+        rgba(38, 11, 11, 0.92) 100%
+      );
+    }
+
+    > div:first-child {
+      max-width: 38rem;
+
+      > a {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 3rem;
+      }
+
+      h2 {
+        font-size: 4rem;
+      }
+
+      > p {
+        max-width: 36rem;
+      }
+    }
+
+    > div:last-child {
+      width: 100%;
+      max-width: 36rem;
+    }
+  }
+
+  // Background & motivation
+  main > section:nth-of-type(2) {
+    padding: 5rem 3rem;
+
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+    > aside {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+
+      h3 {
+        max-width: none;
+      }
+    }
+
+    > article {
+      max-width: 100%;
+    }
+  }
+
+  // Solution overview
+  main > section:nth-of-type(3) {
+    padding: 5rem 3rem;
+
+    grid-template-columns: 1fr;
+    gap: 4rem;
+
+    > aside {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+
+      h3,
+      > p {
+        max-width: 100%;
+      }
+    }
+
+    > article {
+      max-width: 100%;
+    }
+  }
+
+  // Development process
+  main > section:nth-of-type(4) {
+
+    > h2 {
+      padding: 5rem 3rem 0;
+      font-size: 3.2rem;
+    }
+
+    > div {
+      padding: 4rem 3rem;
+
+      grid-template-columns: 1fr;
+      gap: 3rem;
+
+      > aside {
+        padding-right: 0;
+
+        &::after {
+          display: none;
+        }
+
+        h3,
+        > p {
+          max-width: 100%;
+        }
+      }
+
+      > article {
+        max-width: 100%;
+      }
+    }
+
+    > div > article div {
+      gap: 2rem;
+    }
+  }
+
+  // Potential effects
+  main > section:nth-of-type(5) {
+    padding: 4rem 3rem;
+
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    > div {
+      max-width: 38rem;
+    }
+
+    > img {
+      justify-self: start;
+    }
+  }
+
+  // Lessons learned
+  main > section:nth-of-type(6) {
+    padding: 4rem 3rem;
+
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    > img {
+      justify-self: start;
+    }
+
+    > div {
+      max-width: 38rem;
+    }
+  }
+
+  // Thank you
+  main > section:nth-of-type(7) {
+    padding: 4rem 3rem;
+
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    > div {
+      max-width: 38rem;
+    }
+
+    > img {
+      justify-self: start;
+    }
+  }
+}
+
+
+// Mobil
+@media (max-width: 600px) {
+  main > section:nth-of-type(1) {
+    padding: 3rem 1.5rem 4rem;
+    gap: 3rem;
+
+    &::after {
+      opacity: 0.2;
+    }
+
+    > div:first-child {
+
+      > a {
+        margin-bottom: 2.5rem;
+        font-size: 1.6rem;
+      }
+
+      h1 {
+        margin-bottom: 1.3rem;
+        font-size: 0.9rem;
+      }
+
+      h2 {
+        font-size: clamp(2.8rem, 13vw, 3.6rem);
+      }
+
+      > hr {
+        width: 5rem;
+        margin: 2rem 0;
+      }
+
+      > p {
+        font-size: 1rem;
+      }
+    }
+
+    > div:last-child {
+
+      > article {
+        h4 {
+          font-size: 0.95rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+        }
+      }
+
+      > hr {
+        margin: 1.2rem 0;
+      }
+    }
+  }
+
+  // Background & Motivation
+  main > section:nth-of-type(2) {
+    padding: 4rem 1.5rem;
+    gap: 3rem;
+
+    > aside h3 {
+      font-size: 2rem;
+    }
+  }
+
+  // Solution overview
+  main > section:nth-of-type(3) {
+    padding: 4rem 1.5rem;
+    gap: 3rem;
+
+    > aside h3 {
+      font-size: 2.2rem;
+    }
+
+    > article > article {
+      margin-bottom: 2rem;
+
+      h4 {
+        font-size: 1.25rem;
+      }
+
+      img {
+        max-height: none;
+      }
+    }
+  }
+
+  // Development process
+  main > section:nth-of-type(4) {
+
+    > h2 {
+      padding: 4rem 1.5rem 0;
+      font-size: 2.7rem;
+    }
+
+    > div {
+      padding: 3.5rem 1.5rem;
+      gap: 2.5rem;
+
+      aside h3 {
+        font-size: 2rem;
+      }
+
+      > article {
+        h4,
+        h5 {
+          font-size: 1.25rem;
+        }
+
+        // Bilder som låg två och två staplas på mobil
+        div {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        img {
+          max-height: none;
+        }
+      }
+    }
+  }
+
+  // Potential effects
+  main > section:nth-of-type(5) {
+    padding: 3.5rem 1.5rem;
+    gap: 2.5rem;
+
+    > div h2 {
+      font-size: 2.2rem;
+    }
+
+    > img {
+      width: min(100%, 20rem);
+      margin: 0 auto 0 auto;
+    }
+  }
+
+  // Lessons learned
+  main > section:nth-of-type(6) {
+    padding: 3.5rem 1.5rem;
+    gap: 2.5rem;
+
+    > div h2 {
+      font-size: 2.2rem;
+    }
+
+    > img {
+      width: min(100%, 20rem);
+      margin: 0 auto 0 auto;
+    }
+  }
+
+  // Thank you
+  main > section:nth-of-type(7) {
+    padding: 3.5rem 1.5rem;
+    gap: 2.5rem;
+
+    > div h2 {
+      font-size: 2.4rem;
+    }
+
+    > img {
+      width: min(100%, 20rem);
+      margin: 0 auto 0 auto;
+    }
+  }
+
+  // Bildmodal
+  .image-modal {
+    padding: 1rem;
+
+    > img {
+      width: 95vw;
+      height: 90vh;
+    }
+  }
+
+  .close-button {
+    top: 1rem;
+    right: 1.25rem;
+
+    font-size: 2.7rem;
+  }
 }

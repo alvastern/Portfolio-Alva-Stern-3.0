@@ -20,6 +20,12 @@ $white: #fff;
   background: $black;
   color: $white;
 
+  section:first-child,
+  section:last-child {
+    position: relative;
+    top: -2rem;
+  }
+
   section:first-child {
     width: 100%;
     max-width: 45rem;
@@ -164,7 +170,7 @@ $white: #fff;
 #potrait-image {
   width: 30rem;
   max-width: 100%;
-  margin-bottom: 7.5rem;
+  margin-bottom: 5rem;
   height: auto;
   position: relative;
   z-index: 1;
@@ -695,6 +701,435 @@ $white: #fff;
       &:hover {
         color: #e04bc0;
       }
+    }
+  }
+}
+
+// Responsiv design
+@media (max-width: 1180px) {
+  #home-presentation {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    gap: 3.5rem;
+    grid-template-columns: 1.05fr 0.95fr;
+
+    section:first-child,
+    section:last-child {
+      top: -1rem;
+    }
+
+    article {
+      gap: 1.5rem;
+    }
+  }
+
+  #name-rubrik {
+    font-size: 4.8rem;
+  }
+
+  #title-rubrik {
+    font-size: 1.6rem;
+  }
+
+  #potrait-image {
+    width: 26rem;
+    margin-bottom: 3rem;
+  }
+
+  .projects-heading {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  #dizparc-project,
+  #pizza-project,
+  #eleiko-project {
+    width: calc(100% - 7rem);
+    padding: 3.5rem;
+    gap: 5rem;
+
+    section:first-child h3 {
+      font-size: 3rem;
+    }
+  }
+
+  #contact-section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    gap: 3.5rem;
+
+    &::after {
+      font-size: 16rem;
+    }
+
+    > section > h3 {
+      font-size: 4.8rem;
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 900px) {
+  #home-presentation {
+    min-height: auto;
+    padding: 4rem 3rem 5rem 3rem;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+
+    section:first-child,
+    section:last-child {
+      top: 0;
+    }
+
+    section:first-child {
+      max-width: 42rem;
+    }
+
+    section:last-child {
+      justify-content: center;
+
+      &::before {
+        width: 38rem;
+        height: 38rem;
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      &::after {
+        width: 24rem;
+        height: 30rem;
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
+    }
+
+    article {
+      gap: 2rem;
+    }
+  }
+
+  #name-rubrik {
+    font-size: 4.6rem;
+  }
+
+  #potrait-image {
+    width: 25rem;
+    margin-bottom: 0;
+  }
+
+  .projects-section {
+    padding: 5rem 0;
+  }
+
+  .projects-heading {
+    padding: 0 3rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .projects-heading > h3 {
+    font-size: 4.4rem;
+  }
+
+  #dizparc-project,
+  #pizza-project,
+  #eleiko-project {
+    width: calc(100% - 6rem);
+    min-height: auto;
+    margin: 3rem auto;
+    padding: 4rem 3rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    section:first-child,
+    section:last-child {
+      width: 100%;
+      max-width: 100%;
+      justify-self: stretch;
+    }
+
+    section:first-child {
+      h3 {
+        font-size: 3.8rem;
+      }
+
+      p {
+        max-width: 38rem;
+      }
+    }
+
+    section:last-child {
+      max-width: 38rem;
+    }
+
+    &::after {
+      width: 100%;
+      height: 100%;
+      opacity: 0.35;
+    }
+  }
+
+  #dizparc-project::before,
+  #pizza-project::before,
+  #eleiko-project::before {
+    background: rgba(5, 8, 5, 0.78);
+  }
+
+  #skills-section {
+    min-height: auto;
+    padding: 6rem 3rem;
+
+    h3 {
+      font-size: 4.4rem;
+    }
+
+    article > div {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  #contact-section {
+    min-height: auto;
+    padding: 6rem 3rem;
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    > section {
+      grid-column: 1;
+      grid-row: 1;
+      max-width: 38rem;
+    }
+
+    &::after {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: end;
+      align-self: center;
+      font-size: 14rem;
+      opacity: 0.8;
+    }
+
+    > section > h3 {
+      font-size: 4.6rem;
+      white-space: normal;
+    }
+  }
+}
+
+// Mobil
+@media (max-width: 600px) {
+  #home-presentation {
+    padding: 3rem 1.5rem 4rem;
+    gap: 3rem;
+
+    article {
+      margin: 2rem 0;
+      gap: 1.25rem;
+
+      > div {
+        min-width: 100%;
+      }
+    }
+
+    button {
+      padding: 1rem 1.8rem;
+    }
+
+    section:last-child {
+      &::before {
+        width: 28rem;
+        height: 28rem;
+        filter: blur(2.5rem);
+      }
+
+      &::after {
+        width: 18rem;
+        height: 24rem;
+      }
+    }
+  }
+
+  #hi-line-display {
+    gap: 1rem;
+  }
+
+  #hi-rubrik {
+    font-size: 1.1rem;
+  }
+
+  #hi-line {
+    width: 3.5rem;
+  }
+
+  #name-rubrik {
+    margin: 1rem 0;
+    font-size: clamp(3.2rem, 15vw, 4.2rem);
+  }
+
+  #title-rubrik {
+    font-size: 1.35rem;
+  }
+
+  #potrait-image {
+    width: min(100%, 22rem);
+  }
+
+  .projects-section {
+    padding: 4rem 0;
+  }
+
+  .projects-heading {
+    padding: 0 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .projects-heading .section-intro {
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    hr {
+      width: 3.5rem;
+    }
+  }
+
+  .projects-heading > h3 {
+    font-size: 3.5rem;
+  }
+
+  #dizparc-project,
+  #pizza-project,
+  #eleiko-project {
+    width: calc(100% - 2rem);
+    margin: 2rem auto;
+    padding: 3rem 1.5rem;
+    gap: 2.5rem;
+    border-radius: 1rem;
+
+    section:first-child {
+      h2 {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: clamp(2.6rem, 12vw, 3.5rem);
+      }
+
+      hr {
+        width: 5rem;
+        margin: 1.8rem 0;
+      }
+
+      p {
+        margin-bottom: 2rem;
+        font-size: 1rem;
+      }
+    }
+
+    section:last-child {
+      article {
+        h4 {
+          font-size: 0.95rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+        }
+      }
+    }
+
+    &::after {
+      opacity: 0.25;
+    }
+  }
+
+  #skills-section {
+    padding: 5rem 1.5rem;
+
+    section > div:first-child {
+      gap: 1rem;
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      hr {
+        width: 3.5rem;
+      }
+    }
+
+    h3 {
+      margin: 1rem 0 3rem;
+      font-size: 3.5rem;
+    }
+
+    article {
+      margin-bottom: 3.5rem;
+
+      h4 {
+        font-size: 1.5rem;
+      }
+
+      > div {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+      }
+
+      > div > div {
+        min-height: 4rem;
+        padding: 1rem 1.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #contact-section {
+    padding: 5rem 1.5rem;
+
+    > section {
+      max-width: 100%;
+
+      > div:first-child {
+        gap: 1rem;
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        hr {
+          width: 3.5rem;
+        }
+      }
+
+      > h3 {
+        margin: 1rem 0;
+        font-size: 3.5rem;
+      }
+
+      > hr {
+        margin: 1.8rem 0 2.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    &::before {
+      width: 100vw;
+    }
+
+    &::after {
+      justify-self: center;
+      align-self: center;
+      font-size: 10rem;
+      opacity: 0.45;
     }
   }
 }

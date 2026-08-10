@@ -1,11 +1,15 @@
 <header>
-    <h1>Portfolio</h1>
+  <h1>Portfolio</h1>
 
-    <nav>
-        <ul>
-            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">HOME</a></li>
-            <li><a routerLink="/education" routerLinkActive="active">EDUCATION</a></li>
-            <li><a routerLink="/about" routerLinkActive="active">ABOUT ME</a></li>
-        </ul>
-    </nav>
+  <button class="menu-button" type="button" aria-label="Open menu" [attr.aria-expanded]="menuOpen" (click)="toggleMenu()">
+    <i class="fa-solid" [class.fa-bars]="!menuOpen" [class.fa-xmark]="menuOpen"></i>
+  </button>
+
+  <nav [class.open]="menuOpen">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">HOME</a></li>
+      <li><a routerLink="/education" routerLinkActive="active" (click)="closeMenu()">EDUCATION</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">ABOUT ME</a></li>
+    </ul>
+  </nav>
 </header>

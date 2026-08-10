@@ -59,3 +59,90 @@
     background: black;
   }
 }
+
+// Tablet
+@media (max-width: 900px) {
+  #education-page {
+    padding: 4rem 3rem 5rem;
+
+    h2 {
+      font-size: 4.2rem;
+      margin-bottom: 3rem;
+    }
+
+    section {
+      max-width: 100%;
+    }
+
+    article {
+      padding-left: 1.5rem;
+
+      h3 {
+        font-size: 1.8rem;
+      }
+
+      h4 {
+        font-size: 1.1rem;
+      }
+
+      h5 {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        max-width: 100%;
+        font-size: 0.95rem;
+      }
+    }
+
+    hr {
+      max-width: 100%;
+      margin: 2.5rem 0;
+    }
+  }
+}
+
+
+// Mobil
+@media (max-width: 600px) {
+  #education-page {
+    min-height: auto;
+    padding: 3rem 1.5rem 4rem;
+
+    h2 {
+      font-size: 3.2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    article {
+      padding-left: 1.2rem;
+      border-left-width: 2px;
+
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+      }
+
+      h4 {
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+
+      h5 {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 1.2rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+    }
+
+    hr {
+      margin: 2rem 0;
+    }
+  }
+}

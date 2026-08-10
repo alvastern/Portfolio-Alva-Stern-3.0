@@ -12,3 +12,26 @@ footer {
         font-size: 2rem;
     }
 }
+
+// Tablet
+@media (max-width: 900px) {
+  footer {
+    padding: 1.8rem 3rem;
+
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+// Mobil
+@media (max-width: 600px) {
+  footer {
+    padding: 1.5rem;
+    gap: 1.5rem;
+
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+}
