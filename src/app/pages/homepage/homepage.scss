@@ -706,7 +706,7 @@ $white: #fff;
 }
 
 // Responsiv design
-@media (max-width: 1180px) {
+@media (max-width: 1440px) {
   #home-presentation {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -717,6 +717,20 @@ $white: #fff;
     section:last-child {
       top: -1rem;
     }
+
+    section:last-child {
+    &::before {
+      width: 38rem;
+      height: 38rem;
+      right: -2rem;
+    }
+
+    &::after {
+      width: 23rem;
+      height: 30rem;
+      right: 0;
+    }
+  }
 
     article {
       gap: 1.5rem;
@@ -747,6 +761,7 @@ $white: #fff;
     width: calc(100% - 7rem);
     padding: 3.5rem;
     gap: 5rem;
+    min-height: 34rem;
 
     section:first-child h3 {
       font-size: 3rem;
@@ -757,6 +772,12 @@ $white: #fff;
     padding-left: 5rem;
     padding-right: 5rem;
     gap: 3.5rem;
+    overflow-x: clip;
+
+    > section > h3 {
+      font-size: 4.8rem;
+      white-space: normal;
+    }
 
     &::after {
       font-size: 16rem;
